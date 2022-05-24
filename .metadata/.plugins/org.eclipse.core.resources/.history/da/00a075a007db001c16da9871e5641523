@@ -1,0 +1,14 @@
+package Conta;
+
+public class TestaConta {
+	public static void main(String[] args) {
+		Conta conta1 = new Conta();
+		conta1.setNumero(1);
+		conta1.setTitularEmail("teste@teste.com");
+		conta1.setTitularNome("Tété momo");
+		conta1.setTitularCpf("0000000-11");
+		
+		
+		conta1.getDadosConta();
+	}
+}

@@ -1,0 +1,32 @@
+package Conta;
+
+public class Conta {
+	private Titular titular = new Titular();
+	private int numero;
+	private double saldo = 500;
+	
+	public void setNumero(int numeroConta) {
+		numero = numeroConta;
+	}
+	
+	public boolean deposita(int valor) {
+		if(valor <= 0) return false;
+		saldo = saldo + valor;
+		return true;
+	}
+	
+	public boolean saque(int valor) {
+		if(valor <= 0) return false;
+		if (valor > saldo) return false;
+		saldo = saldo-valor;
+		return true;
+	}
+	
+	public void getDadosConta() {
+		titular.getDadosTitular();
+		System.out.println("");
+		System.out.println("Numero: "+ numero);
+		System.out.println("Saldo: "+ saldo);
+	}
+
+}
